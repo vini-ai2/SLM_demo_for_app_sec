@@ -1,38 +1,2982 @@
 {
-  "sql_injection.py": {
+  "sql_injection_01.py": {
     "vulnerable": true,
     "type": "SQL Injection",
     "cwe": "CWE-89",
-    "cwe_accept": ["CWE-89"],
-    "why": "User input is concatenated into the SQL string, so it can change the query.",
-    "code_markers": ["+ username", "execute(query)", "query ="],
-    "explanation_keywords": ["concatenat", "interpolat", "string format", "sanitiz", "parameteriz", "untrusted", "user input", "user-controlled", "user-supplied", "user-provided"],
-    "fix_keywords": ["?", "%s", "parameter", "placeholder", "prepared", "bind"]
+    "cwe_accept": [
+      "CWE-89"
+    ],
+    "why": "User-controlled data changes the structure of a SQL statement.",
+    "code_markers": [
+      "cursor.execute(query)"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "parameterized query"
+    ]
   },
-  "path_traversal.py": {
+  "sql_injection_02.py": {
+    "vulnerable": true,
+    "type": "SQL Injection",
+    "cwe": "CWE-89",
+    "cwe_accept": [
+      "CWE-89"
+    ],
+    "why": "User-controlled data changes the structure of a SQL statement.",
+    "code_markers": [
+      "cursor.execute(query)"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "parameterized query"
+    ]
+  },
+  "sql_injection_03.py": {
+    "vulnerable": true,
+    "type": "SQL Injection",
+    "cwe": "CWE-89",
+    "cwe_accept": [
+      "CWE-89"
+    ],
+    "why": "User-controlled data changes the structure of a SQL statement.",
+    "code_markers": [
+      "cursor.execute"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "parameterized query"
+    ]
+  },
+  "sql_injection_04.py": {
+    "vulnerable": true,
+    "type": "SQL Injection",
+    "cwe": "CWE-89",
+    "cwe_accept": [
+      "CWE-89"
+    ],
+    "why": "User-controlled data changes the structure of a SQL statement.",
+    "code_markers": [
+      "cursor.execute(query)"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "parameterized query"
+    ]
+  },
+  "sql_injection_05.py": {
+    "vulnerable": true,
+    "type": "SQL Injection",
+    "cwe": "CWE-89",
+    "cwe_accept": [
+      "CWE-89"
+    ],
+    "why": "User-controlled data changes the structure of a SQL statement.",
+    "code_markers": [
+      "cursor.execute(query)"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "allowlist"
+    ]
+  },
+  "sql_injection_06.py": {
+    "vulnerable": true,
+    "type": "SQL Injection",
+    "cwe": "CWE-89",
+    "cwe_accept": [
+      "CWE-89"
+    ],
+    "why": "User-controlled data changes the structure of a SQL statement.",
+    "code_markers": [
+      "cursor.execute(query)"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "parameterized query"
+    ]
+  },
+  "sql_injection_07.py": {
+    "vulnerable": true,
+    "type": "SQL Injection",
+    "cwe": "CWE-89",
+    "cwe_accept": [
+      "CWE-89"
+    ],
+    "why": "User-controlled data changes the structure of a SQL statement.",
+    "code_markers": [
+      "cursor.execute(query)"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "parameterized query"
+    ]
+  },
+  "sql_injection_08.py": {
+    "vulnerable": true,
+    "type": "SQL Injection",
+    "cwe": "CWE-89",
+    "cwe_accept": [
+      "CWE-89"
+    ],
+    "why": "User-controlled data changes the structure of a SQL statement.",
+    "code_markers": [
+      "cursor.execute"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "parameterized query"
+    ]
+  },
+  "sql_injection_09.py": {
+    "vulnerable": true,
+    "type": "SQL Injection",
+    "cwe": "CWE-89",
+    "cwe_accept": [
+      "CWE-89"
+    ],
+    "why": "User-controlled data changes the structure of a SQL statement.",
+    "code_markers": [
+      "cursor.execute(query)"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "parameterized query"
+    ]
+  },
+  "sql_injection_10.py": {
+    "vulnerable": true,
+    "type": "SQL Injection",
+    "cwe": "CWE-89",
+    "cwe_accept": [
+      "CWE-89"
+    ],
+    "why": "User-controlled data changes the structure of a SQL statement.",
+    "code_markers": [
+      "cursor.execute(query)"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "allowlist"
+    ]
+  },
+  "sql_injection_11.py": {
+    "vulnerable": true,
+    "type": "SQL Injection",
+    "cwe": "CWE-89",
+    "cwe_accept": [
+      "CWE-89"
+    ],
+    "why": "User-controlled data changes the structure of a SQL statement.",
+    "code_markers": [
+      "cursor.execute(query)"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "parameterized query"
+    ]
+  },
+  "sql_injection_12.py": {
+    "vulnerable": true,
+    "type": "SQL Injection",
+    "cwe": "CWE-89",
+    "cwe_accept": [
+      "CWE-89"
+    ],
+    "why": "User-controlled data changes the structure of a SQL statement.",
+    "code_markers": [
+      "cursor.execute(query)"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "parameterized query"
+    ]
+  },
+  "sql_injection_13.py": {
+    "vulnerable": true,
+    "type": "SQL Injection",
+    "cwe": "CWE-89",
+    "cwe_accept": [
+      "CWE-89"
+    ],
+    "why": "User-controlled data changes the structure of a SQL statement.",
+    "code_markers": [
+      "cursor.execute"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "parameterized query"
+    ]
+  },
+  "sql_injection_14.py": {
+    "vulnerable": true,
+    "type": "SQL Injection",
+    "cwe": "CWE-89",
+    "cwe_accept": [
+      "CWE-89"
+    ],
+    "why": "User-controlled data changes the structure of a SQL statement.",
+    "code_markers": [
+      "cursor.execute(query)"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "parameterized query"
+    ]
+  },
+  "sql_injection_15.py": {
+    "vulnerable": true,
+    "type": "SQL Injection",
+    "cwe": "CWE-89",
+    "cwe_accept": [
+      "CWE-89"
+    ],
+    "why": "User-controlled data changes the structure of a SQL statement.",
+    "code_markers": [
+      "cursor.execute(query)"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "allowlist"
+    ]
+  },
+  "command_injection_01.py": {
+    "vulnerable": true,
+    "type": "Command Injection",
+    "cwe": "CWE-78",
+    "cwe_accept": [
+      "CWE-78"
+    ],
+    "why": "Untrusted input reaches an operating-system command interpreter.",
+    "code_markers": [
+      "subprocess.run(command, shell=True)"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "shell=False"
+    ]
+  },
+  "command_injection_02.py": {
+    "vulnerable": true,
+    "type": "Command Injection",
+    "cwe": "CWE-78",
+    "cwe_accept": [
+      "CWE-78"
+    ],
+    "why": "Untrusted input reaches an operating-system command interpreter.",
+    "code_markers": [
+      "os.system"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "subprocess"
+    ]
+  },
+  "command_injection_03.py": {
+    "vulnerable": true,
+    "type": "Command Injection",
+    "cwe": "CWE-78",
+    "cwe_accept": [
+      "CWE-78"
+    ],
+    "why": "Untrusted input reaches an operating-system command interpreter.",
+    "code_markers": [
+      "shell=True"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "shell=False"
+    ]
+  },
+  "command_injection_04.py": {
+    "vulnerable": true,
+    "type": "Command Injection",
+    "cwe": "CWE-78",
+    "cwe_accept": [
+      "CWE-78"
+    ],
+    "why": "Untrusted input reaches an operating-system command interpreter.",
+    "code_markers": [
+      "subprocess.call(command, shell=True)"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "shell=False"
+    ]
+  },
+  "command_injection_05.py": {
+    "vulnerable": true,
+    "type": "Command Injection",
+    "cwe": "CWE-78",
+    "cwe_accept": [
+      "CWE-78"
+    ],
+    "why": "Untrusted input reaches an operating-system command interpreter.",
+    "code_markers": [
+      "\"sh\", \"-c\""
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "argument list"
+    ]
+  },
+  "command_injection_06.py": {
+    "vulnerable": true,
+    "type": "Command Injection",
+    "cwe": "CWE-78",
+    "cwe_accept": [
+      "CWE-78"
+    ],
+    "why": "Untrusted input reaches an operating-system command interpreter.",
+    "code_markers": [
+      "subprocess.run(command, shell=True)"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "shell=False"
+    ]
+  },
+  "command_injection_07.py": {
+    "vulnerable": true,
+    "type": "Command Injection",
+    "cwe": "CWE-78",
+    "cwe_accept": [
+      "CWE-78"
+    ],
+    "why": "Untrusted input reaches an operating-system command interpreter.",
+    "code_markers": [
+      "os.system"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "subprocess"
+    ]
+  },
+  "command_injection_08.py": {
+    "vulnerable": true,
+    "type": "Command Injection",
+    "cwe": "CWE-78",
+    "cwe_accept": [
+      "CWE-78"
+    ],
+    "why": "Untrusted input reaches an operating-system command interpreter.",
+    "code_markers": [
+      "shell=True"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "shell=False"
+    ]
+  },
+  "command_injection_09.py": {
+    "vulnerable": true,
+    "type": "Command Injection",
+    "cwe": "CWE-78",
+    "cwe_accept": [
+      "CWE-78"
+    ],
+    "why": "Untrusted input reaches an operating-system command interpreter.",
+    "code_markers": [
+      "subprocess.call(command, shell=True)"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "shell=False"
+    ]
+  },
+  "command_injection_10.py": {
+    "vulnerable": true,
+    "type": "Command Injection",
+    "cwe": "CWE-78",
+    "cwe_accept": [
+      "CWE-78"
+    ],
+    "why": "Untrusted input reaches an operating-system command interpreter.",
+    "code_markers": [
+      "\"sh\", \"-c\""
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "argument list"
+    ]
+  },
+  "command_injection_11.py": {
+    "vulnerable": true,
+    "type": "Command Injection",
+    "cwe": "CWE-78",
+    "cwe_accept": [
+      "CWE-78"
+    ],
+    "why": "Untrusted input reaches an operating-system command interpreter.",
+    "code_markers": [
+      "subprocess.run(command, shell=True)"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "shell=False"
+    ]
+  },
+  "command_injection_12.py": {
+    "vulnerable": true,
+    "type": "Command Injection",
+    "cwe": "CWE-78",
+    "cwe_accept": [
+      "CWE-78"
+    ],
+    "why": "Untrusted input reaches an operating-system command interpreter.",
+    "code_markers": [
+      "os.system"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "subprocess"
+    ]
+  },
+  "command_injection_13.py": {
+    "vulnerable": true,
+    "type": "Command Injection",
+    "cwe": "CWE-78",
+    "cwe_accept": [
+      "CWE-78"
+    ],
+    "why": "Untrusted input reaches an operating-system command interpreter.",
+    "code_markers": [
+      "shell=True"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "shell=False"
+    ]
+  },
+  "command_injection_14.py": {
+    "vulnerable": true,
+    "type": "Command Injection",
+    "cwe": "CWE-78",
+    "cwe_accept": [
+      "CWE-78"
+    ],
+    "why": "Untrusted input reaches an operating-system command interpreter.",
+    "code_markers": [
+      "subprocess.call(command, shell=True)"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "shell=False"
+    ]
+  },
+  "command_injection_15.py": {
+    "vulnerable": true,
+    "type": "Command Injection",
+    "cwe": "CWE-78",
+    "cwe_accept": [
+      "CWE-78"
+    ],
+    "why": "Untrusted input reaches an operating-system command interpreter.",
+    "code_markers": [
+      "\"sh\", \"-c\""
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "argument list"
+    ]
+  },
+  "path_traversal_01.py": {
     "vulnerable": true,
     "type": "Path Traversal",
     "cwe": "CWE-22",
-    "cwe_accept": ["CWE-22", "CWE-23", "CWE-36"],
-    "why": "filename can contain ../ and escape UPLOAD_DIR; os.path.join does not stop that (an absolute filename replaces the base entirely).",
-    "code_markers": ["os.path.join", "open(path", "filename"],
-    "explanation_keywords": ["traversal", "../", "outside", "arbitrary file", "escape", "sanitiz", "validat", "untrusted", "user input", "user-controlled", "user-supplied", "user-provided"],
-    "fix_keywords": ["realpath", "abspath", "resolve", "commonpath", "startswith", "basename", "is_relative_to", "secure_filename", "normpath"]
+    "cwe_accept": [
+      "CWE-22"
+    ],
+    "why": "An untrusted path can escape the intended directory.",
+    "code_markers": [
+      "open(path"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "commonpath"
+    ]
   },
-  "command_injection.py": {
+  "path_traversal_02.py": {
     "vulnerable": true,
-    "type": "OS Command Injection",
-    "cwe": "CWE-78",
-    "cwe_accept": ["CWE-78", "CWE-77"],
-    "why": "host is concatenated into a shell command with shell=True, so shell metacharacters run extra commands.",
-    "code_markers": ["shell=true", "+ host", "\"ping -c 1 \""],
-    "explanation_keywords": ["shell", "concatenat", "untrusted", "user input", "user-controlled", "user-supplied", "user-provided", "arbitrary command", "metacharacter", "sanitiz"],
-    "fix_keywords": ["shell=false", "shlex", "[\"ping\"", "['ping'", "allowlist", "whitelist", "ipaddress", "validate"]
+    "type": "Path Traversal",
+    "cwe": "CWE-22",
+    "cwe_accept": [
+      "CWE-22"
+    ],
+    "why": "An untrusted path can escape the intended directory.",
+    "code_markers": [
+      "BASE / user_path"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "resolve"
+    ]
   },
-  "secure_example.py": {
+  "path_traversal_03.py": {
+    "vulnerable": true,
+    "type": "Path Traversal",
+    "cwe": "CWE-22",
+    "cwe_accept": [
+      "CWE-22"
+    ],
+    "why": "An untrusted path can escape the intended directory.",
+    "code_markers": [
+      "open(target"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "commonpath"
+    ]
+  },
+  "path_traversal_04.py": {
+    "vulnerable": true,
+    "type": "Path Traversal",
+    "cwe": "CWE-22",
+    "cwe_accept": [
+      "CWE-22"
+    ],
+    "why": "An untrusted path can escape the intended directory.",
+    "code_markers": [
+      "open(path, \"rb\")"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "resolve"
+    ]
+  },
+  "path_traversal_05.py": {
+    "vulnerable": true,
+    "type": "Path Traversal",
+    "cwe": "CWE-22",
+    "cwe_accept": [
+      "CWE-22"
+    ],
+    "why": "An untrusted path can escape the intended directory.",
+    "code_markers": [
+      "os.path.join(TMP, upload)"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "basename"
+    ]
+  },
+  "path_traversal_06.py": {
+    "vulnerable": true,
+    "type": "Path Traversal",
+    "cwe": "CWE-22",
+    "cwe_accept": [
+      "CWE-22"
+    ],
+    "why": "An untrusted path can escape the intended directory.",
+    "code_markers": [
+      "open(path"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "commonpath"
+    ]
+  },
+  "path_traversal_07.py": {
+    "vulnerable": true,
+    "type": "Path Traversal",
+    "cwe": "CWE-22",
+    "cwe_accept": [
+      "CWE-22"
+    ],
+    "why": "An untrusted path can escape the intended directory.",
+    "code_markers": [
+      "BASE / user_path"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "resolve"
+    ]
+  },
+  "path_traversal_08.py": {
+    "vulnerable": true,
+    "type": "Path Traversal",
+    "cwe": "CWE-22",
+    "cwe_accept": [
+      "CWE-22"
+    ],
+    "why": "An untrusted path can escape the intended directory.",
+    "code_markers": [
+      "open(target"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "commonpath"
+    ]
+  },
+  "path_traversal_09.py": {
+    "vulnerable": true,
+    "type": "Path Traversal",
+    "cwe": "CWE-22",
+    "cwe_accept": [
+      "CWE-22"
+    ],
+    "why": "An untrusted path can escape the intended directory.",
+    "code_markers": [
+      "open(path, \"rb\")"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "resolve"
+    ]
+  },
+  "path_traversal_10.py": {
+    "vulnerable": true,
+    "type": "Path Traversal",
+    "cwe": "CWE-22",
+    "cwe_accept": [
+      "CWE-22"
+    ],
+    "why": "An untrusted path can escape the intended directory.",
+    "code_markers": [
+      "os.path.join(TMP, upload)"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "basename"
+    ]
+  },
+  "path_traversal_11.py": {
+    "vulnerable": true,
+    "type": "Path Traversal",
+    "cwe": "CWE-22",
+    "cwe_accept": [
+      "CWE-22"
+    ],
+    "why": "An untrusted path can escape the intended directory.",
+    "code_markers": [
+      "open(path"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "commonpath"
+    ]
+  },
+  "path_traversal_12.py": {
+    "vulnerable": true,
+    "type": "Path Traversal",
+    "cwe": "CWE-22",
+    "cwe_accept": [
+      "CWE-22"
+    ],
+    "why": "An untrusted path can escape the intended directory.",
+    "code_markers": [
+      "BASE / user_path"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "resolve"
+    ]
+  },
+  "path_traversal_13.py": {
+    "vulnerable": true,
+    "type": "Path Traversal",
+    "cwe": "CWE-22",
+    "cwe_accept": [
+      "CWE-22"
+    ],
+    "why": "An untrusted path can escape the intended directory.",
+    "code_markers": [
+      "open(target"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "commonpath"
+    ]
+  },
+  "path_traversal_14.py": {
+    "vulnerable": true,
+    "type": "Path Traversal",
+    "cwe": "CWE-22",
+    "cwe_accept": [
+      "CWE-22"
+    ],
+    "why": "An untrusted path can escape the intended directory.",
+    "code_markers": [
+      "open(path, \"rb\")"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "resolve"
+    ]
+  },
+  "path_traversal_15.py": {
+    "vulnerable": true,
+    "type": "Path Traversal",
+    "cwe": "CWE-22",
+    "cwe_accept": [
+      "CWE-22"
+    ],
+    "why": "An untrusted path can escape the intended directory.",
+    "code_markers": [
+      "os.path.join(TMP, upload)"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "basename"
+    ]
+  },
+  "xss_01.py": {
+    "vulnerable": true,
+    "type": "Cross-Site Scripting (XSS)",
+    "cwe": "CWE-79",
+    "cwe_accept": [
+      "CWE-79"
+    ],
+    "why": "Unescaped input is inserted into HTML or script content.",
+    "code_markers": [
+      "username"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "escape"
+    ]
+  },
+  "xss_02.py": {
+    "vulnerable": true,
+    "type": "Cross-Site Scripting (XSS)",
+    "cwe": "CWE-79",
+    "cwe_accept": [
+      "CWE-79"
+    ],
+    "why": "Unescaped input is inserted into HTML or script content.",
+    "code_markers": [
+      "comment"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "escape"
+    ]
+  },
+  "xss_03.py": {
+    "vulnerable": true,
+    "type": "Cross-Site Scripting (XSS)",
+    "cwe": "CWE-79",
+    "cwe_accept": [
+      "CWE-79"
+    ],
+    "why": "Unescaped input is inserted into HTML or script content.",
+    "code_markers": [
+      "data-name"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "escape"
+    ]
+  },
+  "xss_04.py": {
+    "vulnerable": true,
+    "type": "Cross-Site Scripting (XSS)",
+    "cwe": "CWE-79",
+    "cwe_accept": [
+      "CWE-79"
+    ],
+    "why": "Unescaped input is inserted into HTML or script content.",
+    "code_markers": [
+      "<script>"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "json"
+    ]
+  },
+  "xss_05.py": {
+    "vulnerable": true,
+    "type": "Cross-Site Scripting (XSS)",
+    "cwe": "CWE-79",
+    "cwe_accept": [
+      "CWE-79"
+    ],
+    "why": "Unescaped input is inserted into HTML or script content.",
+    "code_markers": [
+      "href"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "validate"
+    ]
+  },
+  "xss_06.py": {
+    "vulnerable": true,
+    "type": "Cross-Site Scripting (XSS)",
+    "cwe": "CWE-79",
+    "cwe_accept": [
+      "CWE-79"
+    ],
+    "why": "Unescaped input is inserted into HTML or script content.",
+    "code_markers": [
+      "username"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "escape"
+    ]
+  },
+  "xss_07.py": {
+    "vulnerable": true,
+    "type": "Cross-Site Scripting (XSS)",
+    "cwe": "CWE-79",
+    "cwe_accept": [
+      "CWE-79"
+    ],
+    "why": "Unescaped input is inserted into HTML or script content.",
+    "code_markers": [
+      "comment"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "escape"
+    ]
+  },
+  "xss_08.py": {
+    "vulnerable": true,
+    "type": "Cross-Site Scripting (XSS)",
+    "cwe": "CWE-79",
+    "cwe_accept": [
+      "CWE-79"
+    ],
+    "why": "Unescaped input is inserted into HTML or script content.",
+    "code_markers": [
+      "data-name"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "escape"
+    ]
+  },
+  "xss_09.py": {
+    "vulnerable": true,
+    "type": "Cross-Site Scripting (XSS)",
+    "cwe": "CWE-79",
+    "cwe_accept": [
+      "CWE-79"
+    ],
+    "why": "Unescaped input is inserted into HTML or script content.",
+    "code_markers": [
+      "<script>"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "json"
+    ]
+  },
+  "xss_10.py": {
+    "vulnerable": true,
+    "type": "Cross-Site Scripting (XSS)",
+    "cwe": "CWE-79",
+    "cwe_accept": [
+      "CWE-79"
+    ],
+    "why": "Unescaped input is inserted into HTML or script content.",
+    "code_markers": [
+      "href"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "validate"
+    ]
+  },
+  "xss_11.py": {
+    "vulnerable": true,
+    "type": "Cross-Site Scripting (XSS)",
+    "cwe": "CWE-79",
+    "cwe_accept": [
+      "CWE-79"
+    ],
+    "why": "Unescaped input is inserted into HTML or script content.",
+    "code_markers": [
+      "username"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "escape"
+    ]
+  },
+  "xss_12.py": {
+    "vulnerable": true,
+    "type": "Cross-Site Scripting (XSS)",
+    "cwe": "CWE-79",
+    "cwe_accept": [
+      "CWE-79"
+    ],
+    "why": "Unescaped input is inserted into HTML or script content.",
+    "code_markers": [
+      "comment"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "escape"
+    ]
+  },
+  "xss_13.py": {
+    "vulnerable": true,
+    "type": "Cross-Site Scripting (XSS)",
+    "cwe": "CWE-79",
+    "cwe_accept": [
+      "CWE-79"
+    ],
+    "why": "Unescaped input is inserted into HTML or script content.",
+    "code_markers": [
+      "data-name"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "escape"
+    ]
+  },
+  "xss_14.py": {
+    "vulnerable": true,
+    "type": "Cross-Site Scripting (XSS)",
+    "cwe": "CWE-79",
+    "cwe_accept": [
+      "CWE-79"
+    ],
+    "why": "Unescaped input is inserted into HTML or script content.",
+    "code_markers": [
+      "<script>"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "json"
+    ]
+  },
+  "xss_15.py": {
+    "vulnerable": true,
+    "type": "Cross-Site Scripting (XSS)",
+    "cwe": "CWE-79",
+    "cwe_accept": [
+      "CWE-79"
+    ],
+    "why": "Unescaped input is inserted into HTML or script content.",
+    "code_markers": [
+      "href"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "validate"
+    ]
+  },
+  "hardcoded_secrets_01.py": {
+    "vulnerable": true,
+    "type": "Hardcoded Secrets",
+    "cwe": "CWE-798",
+    "cwe_accept": [
+      "CWE-798"
+    ],
+    "why": "A reusable credential is embedded in source code.",
+    "code_markers": [
+      "API_KEY"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "environment"
+    ]
+  },
+  "hardcoded_secrets_02.py": {
+    "vulnerable": true,
+    "type": "Hardcoded Secrets",
+    "cwe": "CWE-798",
+    "cwe_accept": [
+      "CWE-798"
+    ],
+    "why": "A reusable credential is embedded in source code.",
+    "code_markers": [
+      "password"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "environment"
+    ]
+  },
+  "hardcoded_secrets_03.py": {
+    "vulnerable": true,
+    "type": "Hardcoded Secrets",
+    "cwe": "CWE-798",
+    "cwe_accept": [
+      "CWE-798"
+    ],
+    "why": "A reusable credential is embedded in source code.",
+    "code_markers": [
+      "client_secret"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "secret manager"
+    ]
+  },
+  "hardcoded_secrets_04.py": {
+    "vulnerable": true,
+    "type": "Hardcoded Secrets",
+    "cwe": "CWE-798",
+    "cwe_accept": [
+      "CWE-798"
+    ],
+    "why": "A reusable credential is embedded in source code.",
+    "code_markers": [
+      "AWS_SECRET_ACCESS_KEY"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "environment"
+    ]
+  },
+  "hardcoded_secrets_05.py": {
+    "vulnerable": true,
+    "type": "Hardcoded Secrets",
+    "cwe": "CWE-798",
+    "cwe_accept": [
+      "CWE-798"
+    ],
+    "why": "A reusable credential is embedded in source code.",
+    "code_markers": [
+      "TOKEN"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "environment"
+    ]
+  },
+  "hardcoded_secrets_06.py": {
+    "vulnerable": true,
+    "type": "Hardcoded Secrets",
+    "cwe": "CWE-798",
+    "cwe_accept": [
+      "CWE-798"
+    ],
+    "why": "A reusable credential is embedded in source code.",
+    "code_markers": [
+      "API_KEY"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "environment"
+    ]
+  },
+  "hardcoded_secrets_07.py": {
+    "vulnerable": true,
+    "type": "Hardcoded Secrets",
+    "cwe": "CWE-798",
+    "cwe_accept": [
+      "CWE-798"
+    ],
+    "why": "A reusable credential is embedded in source code.",
+    "code_markers": [
+      "password"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "environment"
+    ]
+  },
+  "hardcoded_secrets_08.py": {
+    "vulnerable": true,
+    "type": "Hardcoded Secrets",
+    "cwe": "CWE-798",
+    "cwe_accept": [
+      "CWE-798"
+    ],
+    "why": "A reusable credential is embedded in source code.",
+    "code_markers": [
+      "client_secret"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "secret manager"
+    ]
+  },
+  "hardcoded_secrets_09.py": {
+    "vulnerable": true,
+    "type": "Hardcoded Secrets",
+    "cwe": "CWE-798",
+    "cwe_accept": [
+      "CWE-798"
+    ],
+    "why": "A reusable credential is embedded in source code.",
+    "code_markers": [
+      "AWS_SECRET_ACCESS_KEY"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "environment"
+    ]
+  },
+  "hardcoded_secrets_10.py": {
+    "vulnerable": true,
+    "type": "Hardcoded Secrets",
+    "cwe": "CWE-798",
+    "cwe_accept": [
+      "CWE-798"
+    ],
+    "why": "A reusable credential is embedded in source code.",
+    "code_markers": [
+      "TOKEN"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "environment"
+    ]
+  },
+  "insecure_deserialization_01.py": {
+    "vulnerable": true,
+    "type": "Insecure Deserialization",
+    "cwe": "CWE-502",
+    "cwe_accept": [
+      "CWE-502"
+    ],
+    "why": "Untrusted serialized data can instantiate attacker-controlled objects.",
+    "code_markers": [
+      "pickle.loads"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "json.loads"
+    ]
+  },
+  "insecure_deserialization_02.py": {
+    "vulnerable": true,
+    "type": "Insecure Deserialization",
+    "cwe": "CWE-502",
+    "cwe_accept": [
+      "CWE-502"
+    ],
+    "why": "Untrusted serialized data can instantiate attacker-controlled objects.",
+    "code_markers": [
+      "yaml.load"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "safe_load"
+    ]
+  },
+  "insecure_deserialization_03.py": {
+    "vulnerable": true,
+    "type": "Insecure Deserialization",
+    "cwe": "CWE-502",
+    "cwe_accept": [
+      "CWE-502"
+    ],
+    "why": "Untrusted serialized data can instantiate attacker-controlled objects.",
+    "code_markers": [
+      "pickle.loads"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "json"
+    ]
+  },
+  "insecure_deserialization_04.py": {
+    "vulnerable": true,
+    "type": "Insecure Deserialization",
+    "cwe": "CWE-502",
+    "cwe_accept": [
+      "CWE-502"
+    ],
+    "why": "Untrusted serialized data can instantiate attacker-controlled objects.",
+    "code_markers": [
+      "marshal.loads"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "json"
+    ]
+  },
+  "insecure_deserialization_05.py": {
+    "vulnerable": true,
+    "type": "Insecure Deserialization",
+    "cwe": "CWE-502",
+    "cwe_accept": [
+      "CWE-502"
+    ],
+    "why": "Untrusted serialized data can instantiate attacker-controlled objects.",
+    "code_markers": [
+      "dill.loads"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "safe format"
+    ]
+  },
+  "insecure_deserialization_06.py": {
+    "vulnerable": true,
+    "type": "Insecure Deserialization",
+    "cwe": "CWE-502",
+    "cwe_accept": [
+      "CWE-502"
+    ],
+    "why": "Untrusted serialized data can instantiate attacker-controlled objects.",
+    "code_markers": [
+      "pickle.loads"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "json.loads"
+    ]
+  },
+  "insecure_deserialization_07.py": {
+    "vulnerable": true,
+    "type": "Insecure Deserialization",
+    "cwe": "CWE-502",
+    "cwe_accept": [
+      "CWE-502"
+    ],
+    "why": "Untrusted serialized data can instantiate attacker-controlled objects.",
+    "code_markers": [
+      "yaml.load"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "safe_load"
+    ]
+  },
+  "insecure_deserialization_08.py": {
+    "vulnerable": true,
+    "type": "Insecure Deserialization",
+    "cwe": "CWE-502",
+    "cwe_accept": [
+      "CWE-502"
+    ],
+    "why": "Untrusted serialized data can instantiate attacker-controlled objects.",
+    "code_markers": [
+      "pickle.loads"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "json"
+    ]
+  },
+  "insecure_deserialization_09.py": {
+    "vulnerable": true,
+    "type": "Insecure Deserialization",
+    "cwe": "CWE-502",
+    "cwe_accept": [
+      "CWE-502"
+    ],
+    "why": "Untrusted serialized data can instantiate attacker-controlled objects.",
+    "code_markers": [
+      "marshal.loads"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "json"
+    ]
+  },
+  "insecure_deserialization_10.py": {
+    "vulnerable": true,
+    "type": "Insecure Deserialization",
+    "cwe": "CWE-502",
+    "cwe_accept": [
+      "CWE-502"
+    ],
+    "why": "Untrusted serialized data can instantiate attacker-controlled objects.",
+    "code_markers": [
+      "dill.loads"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "safe format"
+    ]
+  },
+  "ssrf_01.py": {
+    "vulnerable": true,
+    "type": "Server-Side Request Forgery (SSRF)",
+    "cwe": "CWE-918",
+    "cwe_accept": [
+      "CWE-918"
+    ],
+    "why": "An attacker can make the server request an arbitrary destination.",
+    "code_markers": [
+      "requests.get"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "allowlist"
+    ]
+  },
+  "ssrf_02.py": {
+    "vulnerable": true,
+    "type": "Server-Side Request Forgery (SSRF)",
+    "cwe": "CWE-918",
+    "cwe_accept": [
+      "CWE-918"
+    ],
+    "why": "An attacker can make the server request an arbitrary destination.",
+    "code_markers": [
+      "urlopen"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "allowlist"
+    ]
+  },
+  "ssrf_03.py": {
+    "vulnerable": true,
+    "type": "Server-Side Request Forgery (SSRF)",
+    "cwe": "CWE-918",
+    "cwe_accept": [
+      "CWE-918"
+    ],
+    "why": "An attacker can make the server request an arbitrary destination.",
+    "code_markers": [
+      "requests.post"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "validate"
+    ]
+  },
+  "ssrf_04.py": {
+    "vulnerable": true,
+    "type": "Server-Side Request Forgery (SSRF)",
+    "cwe": "CWE-918",
+    "cwe_accept": [
+      "CWE-918"
+    ],
+    "why": "An attacker can make the server request an arbitrary destination.",
+    "code_markers": [
+      "httpx.get"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "allowlist"
+    ]
+  },
+  "ssrf_05.py": {
+    "vulnerable": true,
+    "type": "Server-Side Request Forgery (SSRF)",
+    "cwe": "CWE-918",
+    "cwe_accept": [
+      "CWE-918"
+    ],
+    "why": "An attacker can make the server request an arbitrary destination.",
+    "code_markers": [
+      "requests.get"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "allowlist"
+    ]
+  },
+  "ssrf_06.py": {
+    "vulnerable": true,
+    "type": "Server-Side Request Forgery (SSRF)",
+    "cwe": "CWE-918",
+    "cwe_accept": [
+      "CWE-918"
+    ],
+    "why": "An attacker can make the server request an arbitrary destination.",
+    "code_markers": [
+      "requests.get"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "allowlist"
+    ]
+  },
+  "ssrf_07.py": {
+    "vulnerable": true,
+    "type": "Server-Side Request Forgery (SSRF)",
+    "cwe": "CWE-918",
+    "cwe_accept": [
+      "CWE-918"
+    ],
+    "why": "An attacker can make the server request an arbitrary destination.",
+    "code_markers": [
+      "urlopen"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "allowlist"
+    ]
+  },
+  "ssrf_08.py": {
+    "vulnerable": true,
+    "type": "Server-Side Request Forgery (SSRF)",
+    "cwe": "CWE-918",
+    "cwe_accept": [
+      "CWE-918"
+    ],
+    "why": "An attacker can make the server request an arbitrary destination.",
+    "code_markers": [
+      "requests.post"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "validate"
+    ]
+  },
+  "ssrf_09.py": {
+    "vulnerable": true,
+    "type": "Server-Side Request Forgery (SSRF)",
+    "cwe": "CWE-918",
+    "cwe_accept": [
+      "CWE-918"
+    ],
+    "why": "An attacker can make the server request an arbitrary destination.",
+    "code_markers": [
+      "httpx.get"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "allowlist"
+    ]
+  },
+  "ssrf_10.py": {
+    "vulnerable": true,
+    "type": "Server-Side Request Forgery (SSRF)",
+    "cwe": "CWE-918",
+    "cwe_accept": [
+      "CWE-918"
+    ],
+    "why": "An attacker can make the server request an arbitrary destination.",
+    "code_markers": [
+      "requests.get"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "allowlist"
+    ]
+  },
+  "weak_cryptography_01.py": {
+    "vulnerable": true,
+    "type": "Weak Cryptography",
+    "cwe": "CWE-327",
+    "cwe_accept": [
+      "CWE-327"
+    ],
+    "why": "The code uses an obsolete or unsuitable cryptographic primitive.",
+    "code_markers": [
+      "md5"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "sha256"
+    ]
+  },
+  "weak_cryptography_02.py": {
+    "vulnerable": true,
+    "type": "Weak Cryptography",
+    "cwe": "CWE-327",
+    "cwe_accept": [
+      "CWE-327"
+    ],
+    "why": "The code uses an obsolete or unsuitable cryptographic primitive.",
+    "code_markers": [
+      "DES.MODE_ECB"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "AES.MODE_GCM"
+    ]
+  },
+  "weak_cryptography_03.py": {
+    "vulnerable": true,
+    "type": "Weak Cryptography",
+    "cwe": "CWE-327",
+    "cwe_accept": [
+      "CWE-327"
+    ],
+    "why": "The code uses an obsolete or unsuitable cryptographic primitive.",
+    "code_markers": [
+      "sha1"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "argon2"
+    ]
+  },
+  "weak_cryptography_04.py": {
+    "vulnerable": true,
+    "type": "Weak Cryptography",
+    "cwe": "CWE-327",
+    "cwe_accept": [
+      "CWE-327"
+    ],
+    "why": "The code uses an obsolete or unsuitable cryptographic primitive.",
+    "code_markers": [
+      "ARC4"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "AES.MODE_GCM"
+    ]
+  },
+  "weak_cryptography_05.py": {
+    "vulnerable": true,
+    "type": "Weak Cryptography",
+    "cwe": "CWE-327",
+    "cwe_accept": [
+      "CWE-327"
+    ],
+    "why": "The code uses an obsolete or unsuitable cryptographic primitive.",
+    "code_markers": [
+      "random.getrandbits"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "secrets"
+    ]
+  },
+  "weak_cryptography_06.py": {
+    "vulnerable": true,
+    "type": "Weak Cryptography",
+    "cwe": "CWE-327",
+    "cwe_accept": [
+      "CWE-327"
+    ],
+    "why": "The code uses an obsolete or unsuitable cryptographic primitive.",
+    "code_markers": [
+      "md5"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "sha256"
+    ]
+  },
+  "weak_cryptography_07.py": {
+    "vulnerable": true,
+    "type": "Weak Cryptography",
+    "cwe": "CWE-327",
+    "cwe_accept": [
+      "CWE-327"
+    ],
+    "why": "The code uses an obsolete or unsuitable cryptographic primitive.",
+    "code_markers": [
+      "DES.MODE_ECB"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "AES.MODE_GCM"
+    ]
+  },
+  "weak_cryptography_08.py": {
+    "vulnerable": true,
+    "type": "Weak Cryptography",
+    "cwe": "CWE-327",
+    "cwe_accept": [
+      "CWE-327"
+    ],
+    "why": "The code uses an obsolete or unsuitable cryptographic primitive.",
+    "code_markers": [
+      "sha1"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "argon2"
+    ]
+  },
+  "weak_cryptography_09.py": {
+    "vulnerable": true,
+    "type": "Weak Cryptography",
+    "cwe": "CWE-327",
+    "cwe_accept": [
+      "CWE-327"
+    ],
+    "why": "The code uses an obsolete or unsuitable cryptographic primitive.",
+    "code_markers": [
+      "ARC4"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "AES.MODE_GCM"
+    ]
+  },
+  "weak_cryptography_10.py": {
+    "vulnerable": true,
+    "type": "Weak Cryptography",
+    "cwe": "CWE-327",
+    "cwe_accept": [
+      "CWE-327"
+    ],
+    "why": "The code uses an obsolete or unsuitable cryptographic primitive.",
+    "code_markers": [
+      "random.getrandbits"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "secrets"
+    ]
+  },
+  "other_cwes_01.py": {
+    "vulnerable": true,
+    "type": "Other CWEs",
+    "cwe": "CWE-362",
+    "cwe_accept": [
+      "CWE-362"
+    ],
+    "why": "The code contains a security weakness requiring context-specific safeguards.",
+    "code_markers": [
+      "account.balance"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "lock"
+    ]
+  },
+  "other_cwes_02.py": {
+    "vulnerable": true,
+    "type": "Other CWEs",
+    "cwe": "CWE-862",
+    "cwe_accept": [
+      "CWE-862"
+    ],
+    "why": "The code contains a security weakness requiring context-specific safeguards.",
+    "code_markers": [
+      "X-Admin"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "authorize"
+    ]
+  },
+  "other_cwes_03.py": {
+    "vulnerable": true,
+    "type": "Other CWEs",
+    "cwe": "CWE-22",
+    "cwe_accept": [
+      "CWE-22"
+    ],
+    "why": "The code contains a security weakness requiring context-specific safeguards.",
+    "code_markers": [
+      "extractall"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "validate paths"
+    ]
+  },
+  "other_cwes_04.py": {
+    "vulnerable": true,
+    "type": "Other CWEs",
+    "cwe": "CWE-489",
+    "cwe_accept": [
+      "CWE-489"
+    ],
+    "why": "The code contains a security weakness requiring context-specific safeguards.",
+    "code_markers": [
+      "debug=True"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "debug=False"
+    ]
+  },
+  "other_cwes_05.py": {
+    "vulnerable": true,
+    "type": "Other CWEs",
+    "cwe": "CWE-78",
+    "cwe_accept": [
+      "CWE-78"
+    ],
+    "why": "The code contains a security weakness requiring context-specific safeguards.",
+    "code_markers": [
+      "subprocess.run"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "validate"
+    ]
+  },
+  "other_cwes_06.py": {
+    "vulnerable": true,
+    "type": "Other CWEs",
+    "cwe": "CWE-362",
+    "cwe_accept": [
+      "CWE-362"
+    ],
+    "why": "The code contains a security weakness requiring context-specific safeguards.",
+    "code_markers": [
+      "account.balance"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "lock"
+    ]
+  },
+  "other_cwes_07.py": {
+    "vulnerable": true,
+    "type": "Other CWEs",
+    "cwe": "CWE-862",
+    "cwe_accept": [
+      "CWE-862"
+    ],
+    "why": "The code contains a security weakness requiring context-specific safeguards.",
+    "code_markers": [
+      "X-Admin"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "authorize"
+    ]
+  },
+  "other_cwes_08.py": {
+    "vulnerable": true,
+    "type": "Other CWEs",
+    "cwe": "CWE-22",
+    "cwe_accept": [
+      "CWE-22"
+    ],
+    "why": "The code contains a security weakness requiring context-specific safeguards.",
+    "code_markers": [
+      "extractall"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "validate paths"
+    ]
+  },
+  "other_cwes_09.py": {
+    "vulnerable": true,
+    "type": "Other CWEs",
+    "cwe": "CWE-489",
+    "cwe_accept": [
+      "CWE-489"
+    ],
+    "why": "The code contains a security weakness requiring context-specific safeguards.",
+    "code_markers": [
+      "debug=True"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "debug=False"
+    ]
+  },
+  "other_cwes_10.py": {
+    "vulnerable": true,
+    "type": "Other CWEs",
+    "cwe": "CWE-78",
+    "cwe_accept": [
+      "CWE-78"
+    ],
+    "why": "The code contains a security weakness requiring context-specific safeguards.",
+    "code_markers": [
+      "subprocess.run"
+    ],
+    "explanation_keywords": [
+      "untrusted",
+      "user input",
+      "attacker",
+      "hardcoded",
+      "weak",
+      "unsafe",
+      "arbitrary",
+      "escape",
+      "insecure"
+    ],
+    "fix_keywords": [
+      "validate"
+    ]
+  },
+  "secure_01.py": {
     "vulnerable": false,
     "type": null,
     "cwe": null,
-    "why": "Same query as sql_injection.py, but the value is passed as a bound parameter (?), so it is never parsed as SQL."
+    "why": "Uses a safe API or validated input and should not be flagged."
+  },
+  "secure_02.py": {
+    "vulnerable": false,
+    "type": null,
+    "cwe": null,
+    "why": "Uses a safe API or validated input and should not be flagged."
+  },
+  "secure_03.py": {
+    "vulnerable": false,
+    "type": null,
+    "cwe": null,
+    "why": "Uses a safe API or validated input and should not be flagged."
+  },
+  "secure_04.py": {
+    "vulnerable": false,
+    "type": null,
+    "cwe": null,
+    "why": "Uses a safe API or validated input and should not be flagged."
+  },
+  "secure_05.py": {
+    "vulnerable": false,
+    "type": null,
+    "cwe": null,
+    "why": "Uses a safe API or validated input and should not be flagged."
+  },
+  "secure_06.py": {
+    "vulnerable": false,
+    "type": null,
+    "cwe": null,
+    "why": "Uses a safe API or validated input and should not be flagged."
+  },
+  "secure_07.py": {
+    "vulnerable": false,
+    "type": null,
+    "cwe": null,
+    "why": "Uses a safe API or validated input and should not be flagged."
+  },
+  "secure_08.py": {
+    "vulnerable": false,
+    "type": null,
+    "cwe": null,
+    "why": "Uses a safe API or validated input and should not be flagged."
+  },
+  "secure_09.py": {
+    "vulnerable": false,
+    "type": null,
+    "cwe": null,
+    "why": "Uses a safe API or validated input and should not be flagged."
+  },
+  "secure_10.py": {
+    "vulnerable": false,
+    "type": null,
+    "cwe": null,
+    "why": "Uses a safe API or validated input and should not be flagged."
+  },
+  "secure_11.py": {
+    "vulnerable": false,
+    "type": null,
+    "cwe": null,
+    "why": "Uses a safe API or validated input and should not be flagged."
+  },
+  "secure_12.py": {
+    "vulnerable": false,
+    "type": null,
+    "cwe": null,
+    "why": "Uses a safe API or validated input and should not be flagged."
+  },
+  "secure_13.py": {
+    "vulnerable": false,
+    "type": null,
+    "cwe": null,
+    "why": "Uses a safe API or validated input and should not be flagged."
+  },
+  "secure_14.py": {
+    "vulnerable": false,
+    "type": null,
+    "cwe": null,
+    "why": "Uses a safe API or validated input and should not be flagged."
+  },
+  "secure_15.py": {
+    "vulnerable": false,
+    "type": null,
+    "cwe": null,
+    "why": "Uses a safe API or validated input and should not be flagged."
+  },
+  "secure_16.py": {
+    "vulnerable": false,
+    "type": null,
+    "cwe": null,
+    "why": "Uses a safe API or validated input and should not be flagged."
+  },
+  "secure_17.py": {
+    "vulnerable": false,
+    "type": null,
+    "cwe": null,
+    "why": "Uses a safe API or validated input and should not be flagged."
+  },
+  "secure_18.py": {
+    "vulnerable": false,
+    "type": null,
+    "cwe": null,
+    "why": "Uses a safe API or validated input and should not be flagged."
+  },
+  "secure_19.py": {
+    "vulnerable": false,
+    "type": null,
+    "cwe": null,
+    "why": "Uses a safe API or validated input and should not be flagged."
+  },
+  "secure_20.py": {
+    "vulnerable": false,
+    "type": null,
+    "cwe": null,
+    "why": "Uses a safe API or validated input and should not be flagged."
   }
 }
