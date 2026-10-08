@@ -13,6 +13,7 @@ function Step($cmd) {
 
 Step "pip install -r requirements.txt"
 foreach ($m in "qwen2.5-coder:3b", "gemma3:4b", "phi4-mini") { Step "ollama pull $m" }
+Step "python examples/generate_corpus.py"
 Step "python evaluation/baseline_bandit.py"
 Step "python models/model_inference.py --all"
 Step "python evaluation/compare.py"
