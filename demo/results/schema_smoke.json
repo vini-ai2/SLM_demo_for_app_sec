@@ -1,0 +1,71 @@
+{
+  "meta": {
+    "date": "2026-10-08T12:48:47",
+    "options": {
+      "temperature": 0,
+      "seed": 0,
+      "num_predict": 160,
+      "repeat_penalty": 1.15,
+      "repeat_last_n": 64,
+      "num_ctx": 2048
+    },
+    "prompt_file": "prompts/security_prompt.txt",
+    "json_hint": "Return exactly the required JSON fields. Use an empty string when a field does not apply. Keep explanation and fix to one short sentence each.",
+    "response_schema": {
+      "type": "object",
+      "properties": {
+        "vulnerable": {
+          "type": "boolean"
+        },
+        "cwe": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "vulnerable_code": {
+          "type": "string"
+        },
+        "explanation": {
+          "type": "string"
+        },
+        "fix": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "vulnerable",
+        "cwe",
+        "type",
+        "vulnerable_code",
+        "explanation",
+        "fix"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "runs": [
+    {
+      "model": "qwen2.5-coder:3b",
+      "latency_s": 9.9,
+      "tokens": 114,
+      "tokens_per_s": 44.0,
+      "raw": "{\n    \"vulnerable\": true,\n    \"cwe\": \"CWE-89\",\n    \"type\": \"SQL Injection\",\n    \"vulnerable_code\": \"# SQL Injection evaluation case 1\\nquery = \\\"SELECT * FROM users WHERE name = '\\\" + value + \\\"'\\\"\\ncursor.execute(query)\",\n    \"explanation\": \"The code concatenates user input directly into the SQL query without proper sanitization, making it vulnerable to SQL injection.\",\n    \"fix\": \"Use parameterized queries or prepared statements to safely handle user inputs.\"\n}",
+      "parsed": {
+        "vulnerable": true,
+        "cwe": "CWE-89",
+        "type": "SQL Injection",
+        "vulnerable_code": "# SQL Injection evaluation case 1\nquery = \"SELECT * FROM users WHERE name = '\" + value + \"'\"\ncursor.execute(query)",
+        "explanation": "The code concatenates user input directly into the SQL query without proper sanitization, making it vulnerable to SQL injection.",
+        "fix": "Use parameterized queries or prepared statements to safely handle user inputs."
+      },
+      "example": "sql_injection_01.py"
+    }
+  ]
+}

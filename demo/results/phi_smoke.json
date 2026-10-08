@@ -1,0 +1,94 @@
+{
+  "meta": {
+    "date": "2026-10-08T12:42:15",
+    "options": {
+      "temperature": 0,
+      "seed": 0,
+      "num_predict": 160,
+      "repeat_penalty": 1.15,
+      "repeat_last_n": 64,
+      "num_ctx": 2048
+    },
+    "prompt_file": "prompts/security_prompt.txt",
+    "json_hint": "Respond with a single JSON object with keys: \"vulnerable\" (true/false), \"cwe\" (e.g. \"CWE-89\" or null), \"type\", \"vulnerable_code\", \"explanation\", \"fix\". Keep explanation and fix to one short sentence each. Do not repeat text."
+  },
+  "runs": [
+    {
+      "model": "phi4-mini",
+      "latency_s": 18.1,
+      "tokens": 114,
+      "tokens_per_s": 15.8,
+      "raw": "{\n  \"vulnerable\": true,\n  \"cwe\": \"CWE-89\",\n  \"type\": \"SQL Injection\",\n  \"vulnerable_code\": \"' + value + '\\\" in query = \\\"SELECT * FROM users WHERE name = '\" \n                                                        \t                      \t\t\t\t                    \t\t\t\t\t                        \t\t\t\t\t\t                         \t\t\t                               \t\t                           \t\t\t\t\t\t\t                            \t                         \t\t\t\t                    \t\t\t          \t\t \t\t\t\t \t\t\t \t\t  \t  \t   \t    \t\t   \t\t\t  \t\t    \t\t\t   \t\t\t    \t\t\t     \t\t     \t     \t      \t        \t        \t\t\t\t\t\t\t\t\t     \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  \t\t\t\t\t\t\t\t\t\t    \t\t\t\t\t\t\t\t\t\t\t    \t      \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                                                                                                                               \n  }",
+      "parsed": {
+        "vulnerable": true,
+        "cwe": "CWE-89",
+        "type": "SQL Injection",
+        "vulnerable_code": "' + value + '\" in query = \"SELECT * FROM users WHERE name = '"
+      },
+      "example": "sql_injection_01.py"
+    },
+    {
+      "model": "phi4-mini",
+      "latency_s": 5.9,
+      "tokens": 94,
+      "tokens_per_s": 27.0,
+      "raw": "{\n  \"vulnerable\": true,\n  \"cwe\": \"CWE-89\",\n  \"type\": \"SQL Injection\",\n  \"vulnerable_code\": \"'id = {value}' in query string.\",\n  \"explanation\": \"Directly interpolating user input into SQL queries without sanitization or parameterized statements leads to potential injection attacks.\", \n  \"fix\": \"Use a prepared statement with placeholders for the 'value' variable.\"\n}",
+      "parsed": {
+        "vulnerable": true,
+        "cwe": "CWE-89",
+        "type": "SQL Injection",
+        "vulnerable_code": "'id = {value}' in query string.",
+        "explanation": "Directly interpolating user input into SQL queries without sanitization or parameterized statements leads to potential injection attacks.",
+        "fix": "Use a prepared statement with placeholders for the 'value' variable."
+      },
+      "example": "sql_injection_02.py"
+    },
+    {
+      "model": "phi4-mini",
+      "latency_s": 5.5,
+      "tokens": 83,
+      "tokens_per_s": 26.1,
+      "raw": "{\n  \"vulnerable\": true,\n  \"cwe\": \"CWE-89\",\n  \"type\": \"SQL Injection\",\n  \"vulnerable_code\": \"' + token + '\\\" in cursor.execute(\\\"DELETE FROM sessions WHERE token = \\\")\",\n  \"explanation\": \"Directly concatenating user input into an SQL statement.\",\n  \"fix\": \"Use parameterized queries instead.\"\n}",
+      "parsed": {
+        "vulnerable": true,
+        "cwe": "CWE-89",
+        "type": "SQL Injection",
+        "vulnerable_code": "' + token + '\" in cursor.execute(\"DELETE FROM sessions WHERE token = \")",
+        "explanation": "Directly concatenating user input into an SQL statement.",
+        "fix": "Use parameterized queries instead."
+      },
+      "example": "sql_injection_03.py"
+    },
+    {
+      "model": "phi4-mini",
+      "latency_s": 16.8,
+      "tokens": 94,
+      "tokens_per_s": 17.3,
+      "raw": "{\n  \"`json\": {\n    \"\\\"Vulnerability\\\": true, \\\"Category\\\" : 'SQL Injection', \\n        Type: CWE-89 (Injection Flaw),\\r\\n            Code Segment:\\t\":\"%s\", \"Explanation\":\"The code is vulnerable to SQL injection as it directly interpolates user input into the query string.\", \"\\u0026 Minimal Fix\": \"\\\"Use parameterized queries or prepared statements instead of direct interpolation.\\\"\"\n  }\n}",
+      "parsed": {
+        "`json": {
+          "\"Vulnerability\": true, \"Category\" : 'SQL Injection', \n        Type: CWE-89 (Injection Flaw),\r\n            Code Segment:\t": "%s",
+          "Explanation": "The code is vulnerable to SQL injection as it directly interpolates user input into the query string.",
+          "& Minimal Fix": "\"Use parameterized queries or prepared statements instead of direct interpolation.\""
+        }
+      },
+      "example": "sql_injection_04.py"
+    },
+    {
+      "model": "phi4-mini",
+      "latency_s": 5.3,
+      "tokens": 77,
+      "tokens_per_s": 26.8,
+      "raw": "{\n  \"vulnerable\": true,\n  \"cwe\": \"CWE-89\",\n  \"type\": \"SQL Injection\",\n  \"vulnerable_code\": \"'SELECT * FROM products ORDER BY ' + sort_key\", \n  \"explanation\": \"Directly concatenating user input into SQL query.\",\n  \"fix\": \"Use parameterized queries instead.\"\n}",
+      "parsed": {
+        "vulnerable": true,
+        "cwe": "CWE-89",
+        "type": "SQL Injection",
+        "vulnerable_code": "'SELECT * FROM products ORDER BY ' + sort_key",
+        "explanation": "Directly concatenating user input into SQL query.",
+        "fix": "Use parameterized queries instead."
+      },
+      "example": "sql_injection_05.py"
+    }
+  ]
+}

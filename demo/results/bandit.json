@@ -1,5 +1,5 @@
 {
-  "sql_injection.py": {
+  "sql_injection_01.py": {
     "flagged": true,
     "findings": [
       {
@@ -7,34 +7,1060 @@
         "issue": "Possible SQL injection vector through string-based query construction.",
         "severity": "MEDIUM",
         "cwe": "CWE-89",
-        "line": 7
+        "line": 2
       }
     ]
   },
-  "path_traversal.py": {
-    "flagged": false,
-    "findings": []
-  },
-  "command_injection.py": {
+  "sql_injection_02.py": {
     "flagged": true,
     "findings": [
       {
-        "test_id": "B404",
-        "issue": "Consider possible security implications associated with the subprocess module.",
-        "severity": "LOW",
+        "test_id": "B608",
+        "issue": "Possible SQL injection vector through string-based query construction.",
+        "severity": "MEDIUM",
+        "cwe": "CWE-89",
+        "line": 2
+      }
+    ]
+  },
+  "sql_injection_03.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B608",
+        "issue": "Possible SQL injection vector through string-based query construction.",
+        "severity": "MEDIUM",
+        "cwe": "CWE-89",
+        "line": 2
+      }
+    ]
+  },
+  "sql_injection_04.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B608",
+        "issue": "Possible SQL injection vector through string-based query construction.",
+        "severity": "MEDIUM",
+        "cwe": "CWE-89",
+        "line": 2
+      }
+    ]
+  },
+  "sql_injection_05.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B608",
+        "issue": "Possible SQL injection vector through string-based query construction.",
+        "severity": "MEDIUM",
+        "cwe": "CWE-89",
+        "line": 2
+      }
+    ]
+  },
+  "sql_injection_06.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B608",
+        "issue": "Possible SQL injection vector through string-based query construction.",
+        "severity": "MEDIUM",
+        "cwe": "CWE-89",
+        "line": 2
+      }
+    ]
+  },
+  "sql_injection_07.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B608",
+        "issue": "Possible SQL injection vector through string-based query construction.",
+        "severity": "MEDIUM",
+        "cwe": "CWE-89",
+        "line": 2
+      }
+    ]
+  },
+  "sql_injection_08.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B608",
+        "issue": "Possible SQL injection vector through string-based query construction.",
+        "severity": "MEDIUM",
+        "cwe": "CWE-89",
+        "line": 2
+      }
+    ]
+  },
+  "sql_injection_09.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B608",
+        "issue": "Possible SQL injection vector through string-based query construction.",
+        "severity": "MEDIUM",
+        "cwe": "CWE-89",
+        "line": 2
+      }
+    ]
+  },
+  "sql_injection_10.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B608",
+        "issue": "Possible SQL injection vector through string-based query construction.",
+        "severity": "MEDIUM",
+        "cwe": "CWE-89",
+        "line": 2
+      }
+    ]
+  },
+  "sql_injection_11.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B608",
+        "issue": "Possible SQL injection vector through string-based query construction.",
+        "severity": "MEDIUM",
+        "cwe": "CWE-89",
+        "line": 2
+      }
+    ]
+  },
+  "sql_injection_12.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B608",
+        "issue": "Possible SQL injection vector through string-based query construction.",
+        "severity": "MEDIUM",
+        "cwe": "CWE-89",
+        "line": 2
+      }
+    ]
+  },
+  "sql_injection_13.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B608",
+        "issue": "Possible SQL injection vector through string-based query construction.",
+        "severity": "MEDIUM",
+        "cwe": "CWE-89",
+        "line": 2
+      }
+    ]
+  },
+  "sql_injection_14.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B608",
+        "issue": "Possible SQL injection vector through string-based query construction.",
+        "severity": "MEDIUM",
+        "cwe": "CWE-89",
+        "line": 2
+      }
+    ]
+  },
+  "sql_injection_15.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B608",
+        "issue": "Possible SQL injection vector through string-based query construction.",
+        "severity": "MEDIUM",
+        "cwe": "CWE-89",
+        "line": 2
+      }
+    ]
+  },
+  "command_injection_01.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "command_injection_02.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B605",
+        "issue": "Starting a process with a shell, possible injection detected, security issue.",
+        "severity": "HIGH",
         "cwe": "CWE-78",
-        "line": 1
-      },
+        "line": 2
+      }
+    ]
+  },
+  "command_injection_03.py": {
+    "flagged": true,
+    "findings": [
       {
         "test_id": "B602",
         "issue": "subprocess call with shell=True identified, security issue.",
         "severity": "HIGH",
         "cwe": "CWE-78",
-        "line": 5
+        "line": 2
       }
     ]
   },
-  "secure_example.py": {
+  "command_injection_04.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "command_injection_05.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B607",
+        "issue": "Starting a process with a partial executable path",
+        "severity": "LOW",
+        "cwe": "CWE-78",
+        "line": 2
+      },
+      {
+        "test_id": "B603",
+        "issue": "subprocess call - check for execution of untrusted input.",
+        "severity": "LOW",
+        "cwe": "CWE-78",
+        "line": 2
+      }
+    ]
+  },
+  "command_injection_06.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "command_injection_07.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B605",
+        "issue": "Starting a process with a shell, possible injection detected, security issue.",
+        "severity": "HIGH",
+        "cwe": "CWE-78",
+        "line": 2
+      }
+    ]
+  },
+  "command_injection_08.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B602",
+        "issue": "subprocess call with shell=True identified, security issue.",
+        "severity": "HIGH",
+        "cwe": "CWE-78",
+        "line": 2
+      }
+    ]
+  },
+  "command_injection_09.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "command_injection_10.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B607",
+        "issue": "Starting a process with a partial executable path",
+        "severity": "LOW",
+        "cwe": "CWE-78",
+        "line": 2
+      },
+      {
+        "test_id": "B603",
+        "issue": "subprocess call - check for execution of untrusted input.",
+        "severity": "LOW",
+        "cwe": "CWE-78",
+        "line": 2
+      }
+    ]
+  },
+  "command_injection_11.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "command_injection_12.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B605",
+        "issue": "Starting a process with a shell, possible injection detected, security issue.",
+        "severity": "HIGH",
+        "cwe": "CWE-78",
+        "line": 2
+      }
+    ]
+  },
+  "command_injection_13.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B602",
+        "issue": "subprocess call with shell=True identified, security issue.",
+        "severity": "HIGH",
+        "cwe": "CWE-78",
+        "line": 2
+      }
+    ]
+  },
+  "command_injection_14.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "command_injection_15.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B607",
+        "issue": "Starting a process with a partial executable path",
+        "severity": "LOW",
+        "cwe": "CWE-78",
+        "line": 2
+      },
+      {
+        "test_id": "B603",
+        "issue": "subprocess call - check for execution of untrusted input.",
+        "severity": "LOW",
+        "cwe": "CWE-78",
+        "line": 2
+      }
+    ]
+  },
+  "path_traversal_01.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "path_traversal_02.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "path_traversal_03.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "path_traversal_04.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "path_traversal_05.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "path_traversal_06.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "path_traversal_07.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "path_traversal_08.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "path_traversal_09.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "path_traversal_10.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "path_traversal_11.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "path_traversal_12.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "path_traversal_13.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "path_traversal_14.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "path_traversal_15.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "xss_01.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "xss_02.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "xss_03.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "xss_04.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "xss_05.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "xss_06.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "xss_07.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "xss_08.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "xss_09.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "xss_10.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "xss_11.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "xss_12.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "xss_13.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "xss_14.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "xss_15.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "hardcoded_secrets_01.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "hardcoded_secrets_02.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B105",
+        "issue": "Possible hardcoded password: 'admin1234'",
+        "severity": "LOW",
+        "cwe": "CWE-259",
+        "line": 2
+      }
+    ]
+  },
+  "hardcoded_secrets_03.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B105",
+        "issue": "Possible hardcoded password: 'oauth-secret-value'",
+        "severity": "LOW",
+        "cwe": "CWE-259",
+        "line": 2
+      }
+    ]
+  },
+  "hardcoded_secrets_04.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B105",
+        "issue": "Possible hardcoded password: 'EXAMPLE_STATIC_SECRET'",
+        "severity": "LOW",
+        "cwe": "CWE-259",
+        "line": 2
+      }
+    ]
+  },
+  "hardcoded_secrets_05.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B105",
+        "issue": "Possible hardcoded password: 'ghp_example_hardcoded_token'",
+        "severity": "LOW",
+        "cwe": "CWE-259",
+        "line": 2
+      }
+    ]
+  },
+  "hardcoded_secrets_06.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "hardcoded_secrets_07.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B105",
+        "issue": "Possible hardcoded password: 'admin1234'",
+        "severity": "LOW",
+        "cwe": "CWE-259",
+        "line": 2
+      }
+    ]
+  },
+  "hardcoded_secrets_08.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B105",
+        "issue": "Possible hardcoded password: 'oauth-secret-value'",
+        "severity": "LOW",
+        "cwe": "CWE-259",
+        "line": 2
+      }
+    ]
+  },
+  "hardcoded_secrets_09.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B105",
+        "issue": "Possible hardcoded password: 'EXAMPLE_STATIC_SECRET'",
+        "severity": "LOW",
+        "cwe": "CWE-259",
+        "line": 2
+      }
+    ]
+  },
+  "hardcoded_secrets_10.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B105",
+        "issue": "Possible hardcoded password: 'ghp_example_hardcoded_token'",
+        "severity": "LOW",
+        "cwe": "CWE-259",
+        "line": 2
+      }
+    ]
+  },
+  "insecure_deserialization_01.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B301",
+        "issue": "Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.",
+        "severity": "MEDIUM",
+        "cwe": "CWE-502",
+        "line": 2
+      }
+    ]
+  },
+  "insecure_deserialization_02.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "insecure_deserialization_03.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B301",
+        "issue": "Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.",
+        "severity": "MEDIUM",
+        "cwe": "CWE-502",
+        "line": 2
+      }
+    ]
+  },
+  "insecure_deserialization_04.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B302",
+        "issue": "Deserialization with the marshal module is possibly dangerous.",
+        "severity": "MEDIUM",
+        "cwe": "CWE-502",
+        "line": 2
+      }
+    ]
+  },
+  "insecure_deserialization_05.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B301",
+        "issue": "Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.",
+        "severity": "MEDIUM",
+        "cwe": "CWE-502",
+        "line": 2
+      }
+    ]
+  },
+  "insecure_deserialization_06.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B301",
+        "issue": "Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.",
+        "severity": "MEDIUM",
+        "cwe": "CWE-502",
+        "line": 2
+      }
+    ]
+  },
+  "insecure_deserialization_07.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "insecure_deserialization_08.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B301",
+        "issue": "Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.",
+        "severity": "MEDIUM",
+        "cwe": "CWE-502",
+        "line": 2
+      }
+    ]
+  },
+  "insecure_deserialization_09.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B302",
+        "issue": "Deserialization with the marshal module is possibly dangerous.",
+        "severity": "MEDIUM",
+        "cwe": "CWE-502",
+        "line": 2
+      }
+    ]
+  },
+  "insecure_deserialization_10.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B301",
+        "issue": "Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.",
+        "severity": "MEDIUM",
+        "cwe": "CWE-502",
+        "line": 2
+      }
+    ]
+  },
+  "ssrf_01.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B113",
+        "issue": "Call to requests without timeout",
+        "severity": "MEDIUM",
+        "cwe": "CWE-400",
+        "line": 2
+      }
+    ]
+  },
+  "ssrf_02.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B310",
+        "issue": "Audit url open for permitted schemes. Allowing use of file:/ or custom schemes is often unexpected.",
+        "severity": "MEDIUM",
+        "cwe": "CWE-22",
+        "line": 2
+      }
+    ]
+  },
+  "ssrf_03.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B113",
+        "issue": "Call to requests without timeout",
+        "severity": "MEDIUM",
+        "cwe": "CWE-400",
+        "line": 2
+      }
+    ]
+  },
+  "ssrf_04.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "ssrf_05.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B113",
+        "issue": "Call to requests without timeout",
+        "severity": "MEDIUM",
+        "cwe": "CWE-400",
+        "line": 2
+      }
+    ]
+  },
+  "ssrf_06.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B113",
+        "issue": "Call to requests without timeout",
+        "severity": "MEDIUM",
+        "cwe": "CWE-400",
+        "line": 2
+      }
+    ]
+  },
+  "ssrf_07.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B310",
+        "issue": "Audit url open for permitted schemes. Allowing use of file:/ or custom schemes is often unexpected.",
+        "severity": "MEDIUM",
+        "cwe": "CWE-22",
+        "line": 2
+      }
+    ]
+  },
+  "ssrf_08.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B113",
+        "issue": "Call to requests without timeout",
+        "severity": "MEDIUM",
+        "cwe": "CWE-400",
+        "line": 2
+      }
+    ]
+  },
+  "ssrf_09.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "ssrf_10.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B113",
+        "issue": "Call to requests without timeout",
+        "severity": "MEDIUM",
+        "cwe": "CWE-400",
+        "line": 2
+      }
+    ]
+  },
+  "weak_cryptography_01.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B324",
+        "issue": "Use of weak MD5 hash for security. Consider usedforsecurity=False",
+        "severity": "HIGH",
+        "cwe": "CWE-327",
+        "line": 2
+      }
+    ]
+  },
+  "weak_cryptography_02.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "weak_cryptography_03.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B324",
+        "issue": "Use of weak SHA1 hash for security. Consider usedforsecurity=False",
+        "severity": "HIGH",
+        "cwe": "CWE-327",
+        "line": 2
+      }
+    ]
+  },
+  "weak_cryptography_04.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "weak_cryptography_05.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B311",
+        "issue": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+        "severity": "LOW",
+        "cwe": "CWE-330",
+        "line": 2
+      }
+    ]
+  },
+  "weak_cryptography_06.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B324",
+        "issue": "Use of weak MD5 hash for security. Consider usedforsecurity=False",
+        "severity": "HIGH",
+        "cwe": "CWE-327",
+        "line": 2
+      }
+    ]
+  },
+  "weak_cryptography_07.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "weak_cryptography_08.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B324",
+        "issue": "Use of weak SHA1 hash for security. Consider usedforsecurity=False",
+        "severity": "HIGH",
+        "cwe": "CWE-327",
+        "line": 2
+      }
+    ]
+  },
+  "weak_cryptography_09.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "weak_cryptography_10.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B311",
+        "issue": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+        "severity": "LOW",
+        "cwe": "CWE-330",
+        "line": 2
+      }
+    ]
+  },
+  "other_cwes_01.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "other_cwes_02.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "other_cwes_03.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "other_cwes_04.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B104",
+        "issue": "Possible binding to all interfaces.",
+        "severity": "MEDIUM",
+        "cwe": "CWE-605",
+        "line": 2
+      }
+    ]
+  },
+  "other_cwes_05.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B607",
+        "issue": "Starting a process with a partial executable path",
+        "severity": "LOW",
+        "cwe": "CWE-78",
+        "line": 2
+      },
+      {
+        "test_id": "B603",
+        "issue": "subprocess call - check for execution of untrusted input.",
+        "severity": "LOW",
+        "cwe": "CWE-78",
+        "line": 2
+      }
+    ]
+  },
+  "other_cwes_06.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "other_cwes_07.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "other_cwes_08.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "other_cwes_09.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B104",
+        "issue": "Possible binding to all interfaces.",
+        "severity": "MEDIUM",
+        "cwe": "CWE-605",
+        "line": 2
+      }
+    ]
+  },
+  "other_cwes_10.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B607",
+        "issue": "Starting a process with a partial executable path",
+        "severity": "LOW",
+        "cwe": "CWE-78",
+        "line": 2
+      },
+      {
+        "test_id": "B603",
+        "issue": "subprocess call - check for execution of untrusted input.",
+        "severity": "LOW",
+        "cwe": "CWE-78",
+        "line": 2
+      }
+    ]
+  },
+  "secure_01.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "secure_02.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B607",
+        "issue": "Starting a process with a partial executable path",
+        "severity": "LOW",
+        "cwe": "CWE-78",
+        "line": 2
+      },
+      {
+        "test_id": "B603",
+        "issue": "subprocess call - check for execution of untrusted input.",
+        "severity": "LOW",
+        "cwe": "CWE-78",
+        "line": 2
+      }
+    ]
+  },
+  "secure_03.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B101",
+        "issue": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+        "severity": "LOW",
+        "cwe": "CWE-703",
+        "line": 2
+      }
+    ]
+  },
+  "secure_04.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "secure_05.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "secure_06.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "secure_07.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "secure_08.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "secure_09.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "secure_10.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "secure_11.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "secure_12.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B607",
+        "issue": "Starting a process with a partial executable path",
+        "severity": "LOW",
+        "cwe": "CWE-78",
+        "line": 2
+      },
+      {
+        "test_id": "B603",
+        "issue": "subprocess call - check for execution of untrusted input.",
+        "severity": "LOW",
+        "cwe": "CWE-78",
+        "line": 2
+      }
+    ]
+  },
+  "secure_13.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B101",
+        "issue": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+        "severity": "LOW",
+        "cwe": "CWE-703",
+        "line": 2
+      }
+    ]
+  },
+  "secure_14.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "secure_15.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "secure_16.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "secure_17.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "secure_18.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "secure_19.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "secure_20.py": {
     "flagged": false,
     "findings": []
   }
