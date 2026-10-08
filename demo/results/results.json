@@ -1,0 +1,176 @@
+{
+  "meta": {
+    "date": "2026-10-07T21:24:07",
+    "options": {
+      "temperature": 0,
+      "seed": 0,
+      "num_predict": 800
+    },
+    "prompt_file": "prompts/security_prompt.txt",
+    "json_hint": "Respond with a single JSON object with keys: \"vulnerable\" (true/false), \"cwe\" (e.g. \"CWE-89\" or null), \"type\", \"vulnerable_code\", \"explanation\", \"fix\"."
+  },
+  "runs": [
+    {
+      "model": "qwen2.5-coder:3b",
+      "latency_s": 7.8,
+      "tokens": 52,
+      "tokens_per_s": 9.6,
+      "raw": "{\n  \"vulnerable\": true,\n  \"cwe\": \"CWE-89\",\n  \"type\": \"SQL Injection\",\n  \"vulnerable_code\": \"query = \\\"SELECT id, email FROM users WHERE name = '\" \t}",
+      "parsed": {
+        "vulnerable": true,
+        "cwe": "CWE-89",
+        "type": "SQL Injection",
+        "vulnerable_code": "query = \"SELECT id, email FROM users WHERE name = '"
+      },
+      "example": "sql_injection.py"
+    },
+    {
+      "model": "qwen2.5-coder:3b",
+      "latency_s": 4.6,
+      "tokens": 121,
+      "tokens_per_s": 52.9,
+      "raw": "{\n  \"vulnerable\": true,\n  \"cwe\": \"CWE-89\",\n  \"type\": \"Path Traversal\",\n  \"vulnerable_code\": \"path = os.path.join(UPLOAD_DIR, filename)\",\n  \"explanation\": \"The code constructs a file path by joining the UPLOAD_DIR and the filename. This can lead to path traversal vulnerabilities if the filename is controlled by an attacker, allowing them to access files outside the UPLOAD_DIR.\",\n  \"fix\": \"Use os.path.abspath() to ensure the path is absolute and does not contain any path traversal components.\"\n}",
+      "parsed": {
+        "vulnerable": true,
+        "cwe": "CWE-89",
+        "type": "Path Traversal",
+        "vulnerable_code": "path = os.path.join(UPLOAD_DIR, filename)",
+        "explanation": "The code constructs a file path by joining the UPLOAD_DIR and the filename. This can lead to path traversal vulnerabilities if the filename is controlled by an attacker, allowing them to access files outside the UPLOAD_DIR.",
+        "fix": "Use os.path.abspath() to ensure the path is absolute and does not contain any path traversal components."
+      },
+      "example": "path_traversal.py"
+    },
+    {
+      "model": "qwen2.5-coder:3b",
+      "latency_s": 4.9,
+      "tokens": 139,
+      "tokens_per_s": 53.7,
+      "raw": "{\n  \"vulnerable\": true,\n  \"cwe\": \"CWE-89\",\n  \"type\": \"Command Injection\",\n  \"vulnerable_code\": \"subprocess.check_output(\\\"ping -c 1 \\\" + host, shell=True, text=True)\",\n  \"explanation\": \"The code uses the `shell=True` parameter in `subprocess.check_output`, which allows the execution of arbitrary shell commands. This can lead to command injection vulnerabilities if the `host` parameter is not properly sanitized.\",\n  \"fix\": \"Use `subprocess.run` with `shell=False` and pass the `host` parameter as a list of arguments to avoid shell execution.\"\n}",
+      "parsed": {
+        "vulnerable": true,
+        "cwe": "CWE-89",
+        "type": "Command Injection",
+        "vulnerable_code": "subprocess.check_output(\"ping -c 1 \" + host, shell=True, text=True)",
+        "explanation": "The code uses the `shell=True` parameter in `subprocess.check_output`, which allows the execution of arbitrary shell commands. This can lead to command injection vulnerabilities if the `host` parameter is not properly sanitized.",
+        "fix": "Use `subprocess.run` with `shell=False` and pass the `host` parameter as a list of arguments to avoid shell execution."
+      },
+      "example": "command_injection.py"
+    },
+    {
+      "model": "qwen2.5-coder:3b",
+      "latency_s": 4.5,
+      "tokens": 119,
+      "tokens_per_s": 53.2,
+      "raw": "{\n  \"vulnerable\": true,\n  \"cwe\": \"CWE-89\",\n  \"type\": \"SQL Injection\",\n  \"vulnerable_code\": \"cur.execute(\\\"SELECT id, email FROM users WHERE name = ?\\\", (username,))\",\n  \"explanation\": \"The code uses a raw SQL query with a user-provided input directly in the SQL statement. This can lead to SQL Injection attacks where an attacker can manipulate the input to execute arbitrary SQL commands.\",\n  \"fix\": \"Use parameterized queries to safely handle user inputs in SQL statements.\"\n}",
+      "parsed": {
+        "vulnerable": true,
+        "cwe": "CWE-89",
+        "type": "SQL Injection",
+        "vulnerable_code": "cur.execute(\"SELECT id, email FROM users WHERE name = ?\", (username,))",
+        "explanation": "The code uses a raw SQL query with a user-provided input directly in the SQL statement. This can lead to SQL Injection attacks where an attacker can manipulate the input to execute arbitrary SQL commands.",
+        "fix": "Use parameterized queries to safely handle user inputs in SQL statements."
+      },
+      "example": "secure_example.py"
+    },
+    {
+      "model": "gemma3:4b",
+      "latency_s": 27.6,
+      "tokens": 2,
+      "tokens_per_s": 15.0,
+      "raw": "{}",
+      "parsed": {},
+      "example": "sql_injection.py"
+    },
+    {
+      "model": "gemma3:4b",
+      "latency_s": 2.8,
+      "tokens": 2,
+      "tokens_per_s": 17.0,
+      "raw": "{}",
+      "parsed": {},
+      "example": "path_traversal.py"
+    },
+    {
+      "model": "gemma3:4b",
+      "latency_s": 2.8,
+      "tokens": 2,
+      "tokens_per_s": 16.8,
+      "raw": "{}",
+      "parsed": {},
+      "example": "command_injection.py"
+    },
+    {
+      "model": "gemma3:4b",
+      "latency_s": 2.8,
+      "tokens": 2,
+      "tokens_per_s": 16.0,
+      "raw": "{}",
+      "parsed": {},
+      "example": "secure_example.py"
+    },
+    {
+      "model": "phi4-mini",
+      "latency_s": 31.4,
+      "tokens": 104,
+      "tokens_per_s": 27.8,
+      "raw": "{\n  \"vulnerable\": true,\n  \"cwe\": \"CWE-89\",\n  \"type\": \"SQL Injection\",\n  \"vulnerable_code\": \"query = \\\"SELECT id, email FROM users WHERE name = '\\\" + username + \\\"'\\\"\",\n  \"explanation\": \"The code is vulnerable to SQL Injection because it directly concatenates user input into the SQL query without sanitization or parameterization.\",\n  \"fix\": \"Use parameterized queries to prevent SQL Injection.\"\n}",
+      "parsed": {
+        "vulnerable": true,
+        "cwe": "CWE-89",
+        "type": "SQL Injection",
+        "vulnerable_code": "query = \"SELECT id, email FROM users WHERE name = '\" + username + \"'\"",
+        "explanation": "The code is vulnerable to SQL Injection because it directly concatenates user input into the SQL query without sanitization or parameterization.",
+        "fix": "Use parameterized queries to prevent SQL Injection."
+      },
+      "example": "sql_injection.py"
+    },
+    {
+      "model": "phi4-mini",
+      "latency_s": 6.1,
+      "tokens": 105,
+      "tokens_per_s": 28.2,
+      "raw": "{\n  \"vulnerable\": true,\n  \"cwe\": \"CWE-20\",\n  \"type\": \"Improper Input Validation\",\n  \"vulnerable_code\": \"path = os.path.join(UPLOAD_DIR, filename)\",\n  \"explanation\": \"The code is vulnerable to path traversal attacks because it directly concatenates the filename with the UPLOAD_DIR path without sanitizing it.\",\n  \"fix\": \"Sanitize the filename to remove any path traversal characters before using it in the path.\"\n}",
+      "parsed": {
+        "vulnerable": true,
+        "cwe": "CWE-20",
+        "type": "Improper Input Validation",
+        "vulnerable_code": "path = os.path.join(UPLOAD_DIR, filename)",
+        "explanation": "The code is vulnerable to path traversal attacks because it directly concatenates the filename with the UPLOAD_DIR path without sanitizing it.",
+        "fix": "Sanitize the filename to remove any path traversal characters before using it in the path."
+      },
+      "example": "path_traversal.py"
+    },
+    {
+      "model": "phi4-mini",
+      "latency_s": 7.1,
+      "tokens": 131,
+      "tokens_per_s": 27.7,
+      "raw": "{\n  \"vulnerable\": true,\n  \"cwe\": \"CWE-209\",\n  \"type\": \"Injection\",\n  \"vulnerable_code\": \"subprocess.check_output(\\\"ping -c 1 \\\" + host, shell=True, text=True)\",\n  \"explanation\": \"The code is vulnerable to shell injection because it constructs a command string with untrusted input (host) and executes it with shell=True.\",\n  \"fix\": \"Use a list of arguments instead of a string, and avoid using shell=True. Example: subprocess.run([\\\"ping\\\", \\\"-c\\\", \\\"1\\\", host], text=True)\"\n}",
+      "parsed": {
+        "vulnerable": true,
+        "cwe": "CWE-209",
+        "type": "Injection",
+        "vulnerable_code": "subprocess.check_output(\"ping -c 1 \" + host, shell=True, text=True)",
+        "explanation": "The code is vulnerable to shell injection because it constructs a command string with untrusted input (host) and executes it with shell=True.",
+        "fix": "Use a list of arguments instead of a string, and avoid using shell=True. Example: subprocess.run([\"ping\", \"-c\", \"1\", host], text=True)"
+      },
+      "example": "command_injection.py"
+    },
+    {
+      "model": "phi4-mini",
+      "latency_s": 6.0,
+      "tokens": 102,
+      "tokens_per_s": 27.7,
+      "raw": "{\n  \"vulnerable\": true,\n  \"cwe\": \"CWE-89\",\n  \"type\": \"SQL Injection\",\n  \"vulnerable_code\": \"cur.execute(\\\"SELECT id, email FROM users WHERE name = ?\\\", (username,))\",\n  \"explanation\": \"The code is vulnerable to SQL Injection because it directly interpolates the username into the SQL query without sanitization or parameterization.\",\n  \"fix\": \"Use parameterized queries to prevent SQL injection.\"\n}",
+      "parsed": {
+        "vulnerable": true,
+        "cwe": "CWE-89",
+        "type": "SQL Injection",
+        "vulnerable_code": "cur.execute(\"SELECT id, email FROM users WHERE name = ?\", (username,))",
+        "explanation": "The code is vulnerable to SQL Injection because it directly interpolates the username into the SQL query without sanitization or parameterization.",
+        "fix": "Use parameterized queries to prevent SQL injection."
+      },
+      "example": "secure_example.py"
+    }
+  ]
+}

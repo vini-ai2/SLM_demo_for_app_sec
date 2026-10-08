@@ -1,0 +1,41 @@
+{
+  "sql_injection.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B608",
+        "issue": "Possible SQL injection vector through string-based query construction.",
+        "severity": "MEDIUM",
+        "cwe": "CWE-89",
+        "line": 7
+      }
+    ]
+  },
+  "path_traversal.py": {
+    "flagged": false,
+    "findings": []
+  },
+  "command_injection.py": {
+    "flagged": true,
+    "findings": [
+      {
+        "test_id": "B404",
+        "issue": "Consider possible security implications associated with the subprocess module.",
+        "severity": "LOW",
+        "cwe": "CWE-78",
+        "line": 1
+      },
+      {
+        "test_id": "B602",
+        "issue": "subprocess call with shell=True identified, security issue.",
+        "severity": "HIGH",
+        "cwe": "CWE-78",
+        "line": 5
+      }
+    ]
+  },
+  "secure_example.py": {
+    "flagged": false,
+    "findings": []
+  }
+}
