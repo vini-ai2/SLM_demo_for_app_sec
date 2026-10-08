@@ -24,14 +24,23 @@ They are kept in the same size class on purpose. To change them, edit `MODELS` i
 
 ## 3. Security examples
 
-| File | Issue | CWE |
-|---|---|---|
-| `examples/sql_injection.py` | username concatenated into a SQL string | CWE-89 |
-| `examples/path_traversal.py` | `os.path.join(UPLOAD_DIR, filename)` with user-controlled `filename` | CWE-22 |
-| `examples/command_injection.py` | `shell=True` with a concatenated host string | CWE-78 |
-| `examples/secure_example.py` | the SQL example fixed with a bound parameter. Must **not** be flagged | none |
+The evaluation corpus contains 130 short Python examples:
 
-`examples/ground_truth.json` holds the expected type, CWE (plus accepted close variants), the reason, and the markers used for scoring.
+| Category | Examples |
+|---|---:|
+| SQL Injection | 15 |
+| Command Injection | 15 |
+| Path Traversal | 15 |
+| XSS | 15 |
+| Hardcoded Secrets | 10 |
+| Insecure Deserialization | 10 |
+| SSRF | 10 |
+| Weak Cryptography | 10 |
+| Other CWEs | 10 |
+| Secure/negative examples | 20 |
+| **Total** | **130** |
+
+`examples/generate_corpus.py` creates the category files and `ground_truth.json`. The ground-truth file is the source of truth for which examples the inference and Bandit scripts process. Run the generator after changing the corpus.
 
 ## 4. How to run
 
@@ -44,8 +53,10 @@ ollama pull gemma3:4b
 ollama pull phi4-mini
 
 python evaluation/baseline_bandit.py        # traditional scanner baseline -> results/bandit.json
+python examples/generate_corpus.py          # regenerate the 130 labeled examples
 python models/model_inference.py --all      # every model x every example -> results/results.json
 python evaluation/compare.py                # scoring + tables -> results/comparison.md
+python evaluation/visualize_results.py      # slide-ready charts -> results/visualizations/
 ```
 
 Or all of it in one go: `powershell -ExecutionPolicy Bypass -File run_all.ps1`
@@ -73,7 +84,7 @@ Prompt: `prompts/security_prompt.txt` (the exact task prompt, identical for ever
 | Relevant code found | the quoted code contains a marker from the real flaw (for example `shell=True`) |
 | Explanation correct | it mentions the actual mechanism (keyword check) |
 | Secure fix reasonable | the fix contains a recognised remedy for that flaw (keyword check) |
-| False positive | `vulnerable` is true on `secure_example.py` |
+| False positive | the report counts flagged secure examples out of 20 |
 | Latency | wall-clock seconds per file, averaged. Hardware-dependent |
 
 Explanation and fix are keyword checks, which are a first pass only. Read the raw outputs in `results/results.json` before presenting. If you disagree with a cell, override it in `evaluation/manual_review.json`:
@@ -104,10 +115,10 @@ SLADE and the SLMs address different problems (anomalies in interaction streams 
 
 ## 7. Limitations
 
-- Four hand-written, textbook-style snippets, one run per model. This is a proof of concept, not a statistically meaningful benchmark. Do not quote percentages from it.
+- 130 small hand-written examples, one run per model. This remains a controlled evaluation set, not a statistically validated benchmark; examples may not represent real applications.
 - The snippets are short and common, so models may have seen near-identical code in training. Results on real, longer, multi-file code would likely be worse.
 - Explanation and fix scoring are keyword heuristics unless you override them manually.
-- Only Python source and three vulnerability classes. One secure file means one false-positive trial.
+- Python source only. “Other CWEs” groups several additional weakness patterns into one reporting category.
 - Models are the 3B to 4B class, run with a token cap and JSON mode. Larger variants or other prompts could change the ranking.
 - Latency depends on your CPU/GPU and what else is running.
 - Bandit is a rule-based linter, not a full SAST pipeline, and the comparison with it is illustrative: it reports pattern matches (including informational notes such as the `subprocess` import) while the models give a verdict plus reasoning.
