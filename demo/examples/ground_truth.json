@@ -1,0 +1,38 @@
+{
+  "sql_injection.py": {
+    "vulnerable": true,
+    "type": "SQL Injection",
+    "cwe": "CWE-89",
+    "cwe_accept": ["CWE-89"],
+    "why": "User input is concatenated into the SQL string, so it can change the query.",
+    "code_markers": ["+ username", "execute(query)", "query ="],
+    "explanation_keywords": ["concatenat", "interpolat", "string format", "sanitiz", "parameteriz", "untrusted", "user input", "user-controlled", "user-supplied", "user-provided"],
+    "fix_keywords": ["?", "%s", "parameter", "placeholder", "prepared", "bind"]
+  },
+  "path_traversal.py": {
+    "vulnerable": true,
+    "type": "Path Traversal",
+    "cwe": "CWE-22",
+    "cwe_accept": ["CWE-22", "CWE-23", "CWE-36"],
+    "why": "filename can contain ../ and escape UPLOAD_DIR; os.path.join does not stop that (an absolute filename replaces the base entirely).",
+    "code_markers": ["os.path.join", "open(path", "filename"],
+    "explanation_keywords": ["traversal", "../", "outside", "arbitrary file", "escape", "sanitiz", "validat", "untrusted", "user input", "user-controlled", "user-supplied", "user-provided"],
+    "fix_keywords": ["realpath", "abspath", "resolve", "commonpath", "startswith", "basename", "is_relative_to", "secure_filename", "normpath"]
+  },
+  "command_injection.py": {
+    "vulnerable": true,
+    "type": "OS Command Injection",
+    "cwe": "CWE-78",
+    "cwe_accept": ["CWE-78", "CWE-77"],
+    "why": "host is concatenated into a shell command with shell=True, so shell metacharacters run extra commands.",
+    "code_markers": ["shell=true", "+ host", "\"ping -c 1 \""],
+    "explanation_keywords": ["shell", "concatenat", "untrusted", "user input", "user-controlled", "user-supplied", "user-provided", "arbitrary command", "metacharacter", "sanitiz"],
+    "fix_keywords": ["shell=false", "shlex", "[\"ping\"", "['ping'", "allowlist", "whitelist", "ipaddress", "validate"]
+  },
+  "secure_example.py": {
+    "vulnerable": false,
+    "type": null,
+    "cwe": null,
+    "why": "Same query as sql_injection.py, but the value is passed as a bound parameter (?), so it is never parsed as SQL."
+  }
+}
