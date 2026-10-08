@@ -14,7 +14,12 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-EXAMPLES = ["sql_injection.py", "path_traversal.py", "command_injection.py", "secure_example.py"]
+def examples() -> list[str]:
+    truth = json.loads((ROOT / "examples" / "ground_truth.json").read_text(encoding="utf-8"))
+    missing = [name for name in truth if not (ROOT / "examples" / name).is_file()]
+    if missing:
+        sys.exit("Missing example files: " + ", ".join(missing))
+    return list(truth)
 
 
 def scan(path: Path) -> list[dict]:
@@ -36,7 +41,7 @@ def scan(path: Path) -> list[dict]:
 def main() -> None:
     out = {}
     print(f"{'example':<22} findings")
-    for ex in EXAMPLES:
+    for ex in examples():
         findings = scan(ROOT / "examples" / ex)
         out[ex] = {"flagged": bool(findings), "findings": findings}
         if findings:

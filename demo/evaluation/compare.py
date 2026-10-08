@@ -93,7 +93,7 @@ def build_tables(runs, truth, overrides, bandit, tick, cross):
     models = list(dict.fromkeys(r["model"] for r in runs))
     vuln_files = [f for f, t in truth.items() if t["vulnerable"]]
     secure_files = [f for f, t in truth.items() if not t["vulnerable"]]
-    by = {(r["model"], r["example"]): r for r in runs}
+    by = {(r["model"], r["example"]): r for r in runs if r.get("example") in truth}
     scores = {k: score(r, truth[k[1]], overrides.get(f"{k[0]}|{k[1]}", {})) for k, r in by.items()}
 
     # Summary table (the slide table)
@@ -107,13 +107,22 @@ def build_tables(runs, truth, overrides, bandit, tick, cross):
             hits = sum(1 for f in vuln_files if scores.get((m, f), {}).get(c))
             row.append(f"{hits}/{len(vuln_files)}")
         rows.append(row)
+    categories = list(dict.fromkeys(truth[f]["type"] for f in vuln_files))
+    for category in categories:
+        category_files = [f for f in vuln_files if truth[f]["type"] == category]
+        row = [f"Detection: {category}"]
+        for m in models:
+            hits = sum(bool(scores.get((m, f), {}).get("detect")) for f in category_files)
+            row.append(f"{hits}/{len(category_files)}")
+        rows.append(row)
     row = ["False positive on secure code"]
     for m in models:
         fps = [scores.get((m, f), {}) for f in secure_files]
         if any(not s.get("parsed") for s in fps):
             row.append("parse error")
         else:
-            row.append("Yes" if any(s.get("false_positive") for s in fps) else "No")
+            count = sum(bool(s.get("false_positive")) for s in fps)
+            row.append(f"{count}/{len(secure_files)}")
     rows.append(row)
     row = ["Avg latency / file"]
     for m in models:
@@ -167,18 +176,32 @@ def main() -> None:
         sys.exit(f"{res} not found. Run: python models/model_inference.py --all")
     runs = json.loads(res.read_text(encoding="utf-8"))["runs"]
     truth = json.loads((ROOT / "examples" / "ground_truth.json").read_text(encoding="utf-8"))
+    coverage = {}
+    for run in runs:
+        if run.get("example") in truth:
+            coverage.setdefault(run["model"], set()).add(run["example"])
+    incomplete = {m: len(truth) - len(files) for m, files in coverage.items() if len(files) != len(truth)}
+    if incomplete:
+        summary = ", ".join(f"{m}: missing {n}" for m, n in incomplete.items())
+        sys.exit(f"Refusing to write a partial comparison ({summary} examples). Complete model inference first.")
     man = ROOT / "evaluation" / "manual_review.json"
     overrides = json.loads(man.read_text(encoding="utf-8")) if man.exists() else {}
     bp = ROOT / "results" / "bandit.json"
     bandit = json.loads(bp.read_text(encoding="utf-8")) if bp.exists() else None
 
-    note = ("Proof-of-concept on 3 hand-written vulnerable files and 1 secure file, one deterministic "
-            "run per model. Not a statistically meaningful benchmark.")
+    counts = {}
+    for t in truth.values():
+        key = t["type"] or "Secure/negative"
+        counts[key] = counts.get(key, 0) + 1
+    note = (f"{len(truth)} hand-written examples, one deterministic run per model. "
+            "Explanation and fix scores use keyword heuristics; results are an illustrative evaluation, "
+            "not a statistically validated benchmark.")
 
     # File version always uses unicode marks; console falls back to Y/N if it cannot print them.
     s_file, d_file = build_tables(runs, truth, overrides, bandit, "✓", "✗")
     Path(args.out).write_text(
-        f"## Summary (vulnerable files: {sum(t['vulnerable'] for t in truth.values())})\n\n{s_file}\n\n"
+        f"## Summary (vulnerable files: {sum(t['vulnerable'] for t in truth.values())}; "
+        f"secure files: {sum(not t['vulnerable'] for t in truth.values())})\n\n{s_file}\n\n"
         f"## Per example\n\n{d_file}\n\n_{note}_\n", encoding="utf-8")
 
     try:
