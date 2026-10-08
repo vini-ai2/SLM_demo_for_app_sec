@@ -1,0 +1,16 @@
+You are a software security auditor.
+
+Analyze the following source code.
+
+Determine:
+1. Whether the code is vulnerable.
+2. The CWE category, if applicable.
+3. The vulnerability type.
+4. The specific code responsible.
+5. A short explanation.
+6. A minimal secure fix.
+
+Return the result in a structured format.
+
+Source code:
+{CODE}
