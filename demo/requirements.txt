@@ -1,0 +1,3 @@
+# Model code uses only the standard library and talks to a local Ollama server.
+# Bandit is the optional traditional-scanner baseline.
+bandit>=1.7.5
